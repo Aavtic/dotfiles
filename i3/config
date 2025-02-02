@@ -202,8 +202,8 @@ bar {
 # Key bindings
 
 bindsym $mod+Shift+e exec thunar
-bindsym $mod+Shift+r exec restart 
-bindsym $mod+s exec shutdown now
+bindsym $mod+Shift+Delete exec shutdown now
+bindsym $mod+Delete exec shutdown now
 bindsym $mod+g exec i3lock -i /home/aad1sh/.config/i3/Wallpapers/cmask2.png
 
 bindsym Print exec xfce4-screenshooter -f
