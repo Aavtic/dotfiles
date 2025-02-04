@@ -82,10 +82,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+l move left
+bindsym $mod+Shift+l move rigt
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
-bindsym $mod+Shift+h move right
+bindsym $mod+Shift+h move left
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -206,10 +206,13 @@ bar {
 bindsym $mod+Shift+e exec thunar
 bindsym $mod+Shift+Delete exec shutdown now
 bindsym $mod+Delete exec shutdown now
-bindsym $mod+g exec i3lock -i /home/aad1sh/.config/i3/Wallpapers/cmask2.png
+# bindsym $mod+g exec --no-startup-id i3lock -i /home/aad1sh/.config/i3/Wallpapers/cmask2.png
+bindsym $mod+g exec betterlockscreen -l dim
 
 bindsym Print exec xfce4-screenshooter -f
 bindsym $mod+Shift+s exec xfce4-screenshooter -r
 bindsym $mod+Shift+c exec xfce4-screenshooter -c -r
 
 exec  --no-startup-id pasystray
+exec --no-startup-id xfce4-clipman &
+exec --no-startup-id betterlockscreen -w dim
