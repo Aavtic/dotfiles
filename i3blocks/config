@@ -90,7 +90,6 @@ interval=5
 # see the script for details.
 [cpu_usage]
 label=CPU
-color=#ff0019
 interval=10
 min_width=CPU: 100.00%
 #separator=false
@@ -98,11 +97,16 @@ min_width=CPU: 100.00%
 #[load_average]
 #interval=10
 
-# CPU Temp
-[cpu_temp]
-label=
-command=/home/aad1sh/.config/i3blocks/scripts/cpu_temp.sh
-interval=2
+# Temperature
+#
+# Support multiple chips, though lm-sensors.
+# The script may be called with -w and -c switches to specify thresholds,
+# see the script for details.
+
+[temperature]
+label=Kattan
+color=#ff0019
+interval=10
 
 
 # Battery indicator
@@ -134,15 +138,6 @@ interval=5
 # Support multiple VPN, with colors.
 #[openvpn]
 #interval=20
-
-# Temperature
-#
-# Support multiple chips, though lm-sensors.
-# The script may be called with -w and -c switches to specify thresholds,
-# see the script for details.
-#[temperature]
-#label=TEMP
-#interval=10
 
 # Key indicators
 #

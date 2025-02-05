@@ -193,10 +193,11 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
-        tray_output primary
-        font: "Iosevka Medium" 8
+        status_command i3blocks
 }
+
+# tray_output primary
+# font: "Iosevka Medium" 8
 
 # exec --no-startup-id nitrogen --restore
 
