@@ -410,5 +410,4 @@ for_window [class="firefox"] move to workspace $ws2
 
 
 # Compositor
-
 exec_always picom -f
