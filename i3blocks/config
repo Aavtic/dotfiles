@@ -23,10 +23,6 @@ interval=3600
 markup=pango
 LABEL=Updates: 
 
-[ssid]
-command=$HOME/.config/scripts/ssid
-#INTERFACE=wlan0
-interval=60
 
 [disk]
 command=$HOME/.config/scripts/disk
@@ -37,14 +33,22 @@ interval=30
 
 [volume]
 command=$HOME/.config/scripts/volume
-LABEL=♪ 
-# LABEL=VOL 
-interval=1
+#LABEL=♪ 
+LABEL=VOL 
+interval=once
 signal=10
+click-right=~/.config/scripts/pavucontrol
 #STEP=5%
-MIXER=default
+#MIXER=[determined automatically]
 #SCONTROL=[determined automatically]
 #NATURAL_MAPPING=0
+
+[battery]
+command=$HOME/.config/scripts/battery
+interval=30
+# LABEL=BAT
+LABEL=⚡
+BAT_NUMBER=0
 
 [time]
 command=date '+%Y-%m-%d %H:%M:%S'
