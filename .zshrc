@@ -4,7 +4,14 @@
 
 # My aliases
 
-# alias open=xdg-open
+alias longrangezip="lrzdir=directory; tar cvf $lrzdir.tar $lrzdir; lrzip -Ubvvp `nproc` -S .bzip2-lrz -L 9 $lrzdir.tar; rm -fv $lrzdir.tar; unset lrzdir"
+alias longrangeunzip="lrzdir=directory; lrunzip -cdivvp `nproc` -o $lrzdir.tar $lrzdir.tar.bzip2-lrz; tar xvf $lrzdir.tar; rm -vf $lrzdir.tar"
+alias nvimconf="nvim ~/.config/nvim"
+
+
+
+
+alias open=xdg-open
 
 
 setopt autocd              # change directory just by typing its name
