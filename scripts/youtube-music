@@ -1,0 +1,25 @@
+#!/bin/env bash
+
+WIN_ID=$(xdotool search --name "YouTube Music — Mozilla Firefox" | head -n 1)  # Get first matching window ID
+
+if [ -n "$WIN_ID" ]; then
+    WIN=$(xdotool getwindowname "$WIN_ID")
+    STRIPPED=${WIN::-34}
+
+    if [ -n "$STRIPPED" ]; then  # Check if STRIPPED is non-empty
+        echo "$STRIPPED"
+    fi
+else
+    echo "No Music:/"
+fi
+
+#
+# #!/bin/bash
+#
+# WIN=$(xdotool search "YouTube Music — Mozilla Firefox" getwindowname)
+#
+# echo $WIN
+#
+# STRIPPED=${WIN::-34}
+#
+# STRIPPED
