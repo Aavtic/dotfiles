@@ -22,11 +22,42 @@ interval=2
 color=#A6CDC6
 # LABEL=BAT
 
-[arch-update]
-command=$HOME/.config/scripts/arch-update 
-interval=3600
-markup=pango
-LABEL=Updates: 
+# [arch-update]
+# command=$HOME/.config/scripts/arch-update 
+# interval=3600
+# markup=pango
+# LABEL=Updates: 
+
+
+[IPAddress]
+command=$HOME/.config/scripts/ipaddress
+interval=60
+color=#51f216
+# LABEL=BAT
+
+[cpu_usage]
+command=$HOME/.config/scripts/cpu_usage
+interval=10
+LABEL=CPU 
+#min_width=CPU: 100.00%
+#T_WARN=50
+#T_CRIT=80
+#DECIMALS=2
+#COLOR_NORMAL=#EBDBB2
+#COLOR_WARN=#FFFC00
+#COLOR_CRIT=#FF0000
+
+[temperature]
+command=$HOME/.config/scripts/temperature
+label=Kattan: 
+interval=10
+#T_WARN=70
+#T_CRIT=90
+#SENSOR_CHIP=""
+
+[memory]
+command=$HOME/.config/scripts/memory
+interval=5
 
 
 [disk]
@@ -36,16 +67,11 @@ LABEL=
 #ALERT_LOW=10
 interval=30
 
-[volume]
-command=$HOME/.config/scripts/volume
-#LABEL=♪ 
-LABEL=VOL 
-interval=1
-click-left=/usr/bin/pavucontrol
-#STEP=5%
-#MIXER=[determined automatically]
-#SCONTROL=[determined automatically]
-#NATURAL_MAPPING=0
+[volume-pulseaudio]
+command=$HOME/.config/scripts/volume-pulseaudio
+interval=persist
+SUBSCRIBE=1
+USE_ALSA_NAME=1
 
 [battery]
 command=$HOME/.config/scripts/battery
