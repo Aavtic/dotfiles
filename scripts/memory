@@ -1,0 +1,6 @@
+#!/bin/bash
+
+TOTAL=$(free -h | grep -P "\d+\.\d+Gi" -o | sed -n '1p')
+USED=$(free -h | grep -P "\d+\.\d+Gi" -o | sed -n '2p')
+
+echo Total: $TOTAL Used: $USED
