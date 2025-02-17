@@ -65,7 +65,7 @@ command=$HOME/.config/scripts/disk
 LABEL=  
 #DIR=$HOME
 #ALERT_LOW=10
-interval=30
+interval=once
 
 [volume-pulseaudio]
 command=$HOME/.config/scripts/volume-pulseaudio
