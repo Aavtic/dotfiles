@@ -410,7 +410,7 @@ exec --no-startup-id betterlockscreen -w dim
 
 # Wallpaper
 
-exec_always feh --bg-fill /home/aad1sh/Pictures/wallpapers/arch.png
+exec_always feh --bg-fill /home/aad1sh/Pictures/wallpapers/archblack.png
 
 # Assign workspaces
 
@@ -419,3 +419,7 @@ for_window [class="firefox"] move to workspace $ws2
 
 # Compositor
 exec_always picom -f
+
+
+# Start xfsettingsd
+exec --no-startup-id xfsettingsd
