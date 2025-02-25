@@ -67,11 +67,9 @@ LABEL=
 #ALERT_LOW=10
 interval=once
 
-[volume-pulseaudio]
-command=$HOME/.config/scripts/volume-pulseaudio
-interval=persist
-SUBSCRIBE=1
-USE_ALSA_NAME=1
+[volume]
+command=$HOME/.config/scripts/volume
+interval=3
 
 [battery]
 command=$HOME/.config/scripts/battery
