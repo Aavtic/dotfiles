@@ -137,7 +137,7 @@ bindsym $mod+a focus parent
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1:Terminal"
 set $ws2 "2: Firefox"
-set $ws3 "3"
+set $ws3 "3: Music"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -423,3 +423,4 @@ exec_always picom -f
 
 # Start xfsettingsd
 exec --no-startup-id xfsettingsd
+exec --no-startup-id blueman-applet
