@@ -9,8 +9,6 @@ alias longrangeunzip="lrunzip -cdivvp `nproc` -d -o \$lrzdir.tar \$lrzdir.tar.bz
 alias nvimconf="nvim ~/.config/nvim"
 
 
-
-
 alias open=xdg-open
 
 
