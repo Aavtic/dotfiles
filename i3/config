@@ -68,7 +68,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec terminator&
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -137,7 +137,7 @@ bindsym $mod+a focus parent
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1:Terminal"
 set $ws2 "2: Firefox"
-set $ws3 "3"
+set $ws3 "3:BetterBird"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -410,11 +410,12 @@ exec --no-startup-id betterlockscreen -w dim
 
 # Wallpaper
 
-exec_always feh --bg-fill /home/aad1sh/Pictures/wallpapers/archblack.png
+exec_always feh --bg-fill /home/aad1sh/Pictures/wallpapers/mrrobot.jpg
 
 # Assign workspaces
 
 for_window [class="firefox"] move to workspace $ws2
+for_window [class="betterbird"] move to workspace $ws3
 
 
 # Compositor
