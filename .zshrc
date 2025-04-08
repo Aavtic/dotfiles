@@ -2,6 +2,11 @@
 # see /usr/share/doc/zsh/examples/zshrc for examples
 #
 
+# Exports
+
+# installations on /usr/local
+export PATH=$PATH:/usr/local/go/bin
+
 # My aliases
 
 alias longrangezip="tar cvf $lrzdir.tar $lrzdir; lrzip -Ubvvp `nproc` -S .bzip2-lrz -L 9 $lrzdir.tar; rm -fv $lrzdir.tar; unset lrzdir"
@@ -50,6 +55,10 @@ setopt notify              # report the status of background jobs immediately
 setopt numericglobsort     # sort filenames numerically when it makes sense
 setopt promptsubst         # enable command substitution in prompt
 
+# Add newline after each command
+precmd() { print "" }
+
+
 # === Basic settings ===
 export HISTSIZE=1000
 export SAVEHIST=1000
@@ -61,7 +70,7 @@ PROMPT="%F{blue}┌─[%F{red}%n@%m%F{blue}] [%F{yellow}%~%F{blue}]
 
 
 # === Emoji Prompt Indicator ===
-RPROMPT="%? %F{red}"
+RPROMPT="%? %F{red}"
 
 # === Enable completion ===
 autoload -Uz compinit

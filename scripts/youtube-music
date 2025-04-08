@@ -8,7 +8,7 @@ if [ -n "$WIN_ID" ]; then
 
     if [ -n "$STRIPPED" ]; then  # Check if STRIPPED is non-empty
         STRIPPED=${STRIPPED::30};
-        echo "$STRIPPED"
+        echo "  $STRIPPED"
     fi
 else
     echo "No Music:/"
