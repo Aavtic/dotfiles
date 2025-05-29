@@ -1,0 +1,33 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/night_owl.toml"
+]
+
+[cursor]
+
+style = "Block"
+
+[font]
+
+size = 16
+
+[font.normal]
+
+family = "Iosevka"
+
+[window]
+
+startup_mode = "Windowed"
+
+dynamic_padding = true
+
+opacity = 0.5
+
+[window.padding]
+
+x = 6
+
+y = 0
+
+[scrolling]
+history = 10000
