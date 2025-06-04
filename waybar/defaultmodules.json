@@ -1,0 +1,191 @@
+{
+    "battery": {
+        "spacing": 8,
+        "bat": "BAT0",
+        "interval": 30,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-icons": [" ", " ", " ", " ", " "],
+        "max-length": 25
+    },
+
+    "clock": {
+        "spacing": 8,
+        "format": "{:%H:%M}  ",
+        "format-alt": "{:L%A, %B %d, %Y (%R)} ",
+        "tooltip-format": "\n<span size='9pt' font='WenQuanYi Zen Hei Mono'>{calendar}</span>",
+        "calendar": {
+                    "mode"          : "year",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+        },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-click-forward": "tz_up",
+                    "on-click-backward": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+        }
+    },
+
+    "group/bat_clock": {
+        "orientation": "horizontal",
+        "modules": [
+            "battery",
+            "clock",
+        ],
+    },
+
+    "cpu": {
+        "interval": 10,
+        "format": "{}%   ",
+        "max-length": 10
+    },
+
+    "memory": {
+        "interval": 10,
+        "format": "{used:0.1f}G/{total:0.1f}G   "
+    },
+
+    "disk": {
+      "interval": 30,
+      "path": "/home",
+      "format": "🖴 {specific_free:0.2f}GB ",
+      "format-alt": "{specific_free:0.2f} GB out of {specific_total:0.2f} GB available ",
+      "unit": "GB"
+    },
+
+    "temperature": {
+        "format": "{temperatureC}°C "
+    },
+
+    "custom/hardware-wrap": {
+        	"format": "   🖴 ",
+        	"tooltip-format": "Hardware group"
+    },
+
+    "group/hardware": {
+        "orientation": "horizontal",
+
+        "drawer": {
+		        "transition-duration": 500,
+		        "transition-right-to-left": true,
+	      },
+
+        "modules": [
+            "custom/hardware-wrap",
+            "cpu",
+            "memory",
+            "disk",
+            "temperature",
+        ],
+    },
+
+    
+    "custom/media": {
+        "format": "{icon}{text}",
+        "return-type": "json",
+        "format-icons": {
+            "Playing": " ",
+            "Paused": " ",
+        },
+        "max-length":30,
+        "exec": "playerctl -a metadata --format '{\"text\": \"{{playerName}}: {{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+        "on-click": "playerctl play-pause",
+    },
+
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "alsa_output.pci-0000_00_1f.3.analog-stereo": " ",
+            "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": " ",
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": "",
+            "phone-muted": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [" ", " "]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol",
+        "ignored-sinks": ["Easy Effects Sink"]
+    },
+
+    "network": {
+      "format": "{ifname}",
+      "format-wifi": "{icon}",
+      "format-ethernet": "󰌘",
+      "format-disconnected": "󰌙",
+      "tooltip-format": "{ipaddr}  {bandwidthUpBits}  {bandwidthDownBits}",
+      "format-linked": "󰈁 {ifname} (No IP)",
+      "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+      "tooltip-format-ethernet": "{ifname} 󰌘",
+      "tooltip-format-disconnected": "󰌙 Disconnected",
+      "max-length": 30,
+      "format-icons": [
+        "󰤯", "󰤟", "󰤢", "󰤥", "󰤨"
+      ],
+      "on-click-right": "$HOME/.config/hypr/scripts/WaybarScripts.sh --nmtui"
+    },
+
+    "network#speed": {
+      "interval": 1,
+      "format": "{ifname}",
+      "format-wifi": "{icon}  {bandwidthUpBytes}  {bandwidthDownBytes}",
+      "format-ethernet": "󰌘  {bandwidthUpBytes}  {bandwidthDownBytes}",
+      "format-disconnected": "󰌙",
+      "tooltip-format": "{ipaddr}",
+      "format-linked": "󰈁 {ifname} (No IP)",
+      "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+      "tooltip-format-ethernet": "{ifname} 󰌘",
+      "tooltip-format-disconnected": "󰌙 Disconnected",
+      "min-length": 24,
+      "max-length": 24,
+      "format-icons": [
+        "󰤯", "󰤟", "󰤢", "󰤥", "󰤨"
+      ]
+    },
+
+    "bluetooth": {
+      // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+      "format": " {status}",
+      "format-disabled": "", // an empty format will hide the module
+      "format-connected": " {num_connections} connected",
+      "tooltip-format": "{controller_alias}\t{controller_address}",
+      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    },
+
+    "user": {
+            "format": "{user}",
+            "interval": 60,
+            "height": 30,
+            "width": 30,
+            "icon": true,
+    },
+
+    "custom/power": {
+        "format": "",
+        "tooltip": false,
+        "interval": 60,
+        "on-click": "~/.config/rofi/powermenu/type-4/powermenu.sh",
+        "exec": "echo ",
+    }
+
+
+}

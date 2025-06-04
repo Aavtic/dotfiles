@@ -1,0 +1,156 @@
+window#waybar {
+    background-color: inherit;
+    font-family: Iosevka;
+    color: #e4ffbf;
+}
+
+.modules-right {
+    background-color: inherit;
+}
+
+.modules-right > widget {
+  margin-left: 8px;
+}
+
+
+#battery {
+  margin-right: 8px;  /* Add space between battery and clock */
+}
+
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#tray, #workspaces, #user,  #hardware, #wireless, #bat_clock, #custom-media, #pulseaudio, #weather, #custom-power {
+    background-color: #202c2e;
+    padding: 0 10px;
+    border-radius: 10px;
+    margin-right: 8px;
+}
+
+@keyframes user_animation {
+  0% {
+      color: #ffffff;
+  }
+  10% {
+      color: #4882bb;
+  }
+  20% {
+      color: #0080ff;
+  }
+  30% {
+      color: #faff00;
+  }
+
+  40% {
+      color: #ff0000;
+  }
+  50% {
+      color: #11ff00;
+  }
+
+  60% {
+      color: #000000;
+  }
+  70% {
+      color: #fce000;
+  }
+  80% {
+      color: #ff0006;
+  }
+  100% {
+      color: #ff0006;
+  }
+
+}
+
+#user {
+    animation-name: user_animation;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+}
+
+
+
+
+/* #tray: hover, */
+/* #workspaces: hover, */
+/* #user: hover, */
+/* #hardware: hover, */
+/* #wireless: hover, */
+/* #bat_clock: hover, */
+/* #custom-media: hover, */
+/* #pulseaudio: hover { */
+/*     background-color: cyan; */
+/* } */
+
+
+/**/
+/* #media_player { */
+/*     padding: 10px; */
+/* } */
+
+
+#temperature.critical {
+    border-radius: 5px;
+    background-color: red;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes button_animation {
+    from {
+        border-radius: 5px;
+    }
+    to {
+        border-radius: 20px;
+    }
+}
+
+#workspaces button {
+    padding: 2px 8px; /* Reduce padding */
+    margin: 2px;       /* Adds space around the button */
+    min-width: 0;      /* Prevents overly wide buttons */
+    border: 2px solid transparent; /* Adds room for animated border */
+}
+
+#workspaces button.active {
+
+    animation-name: button_animation;
+    animation-duration: 1.0s;
+
+    border-radius: 20px;
+    border-color: cyan;
+
+    background-color: cyan;
+    color: black;
+}
+
+/* https://google.com */
+
+
+
+#workspaces button.urgent {
+    background-color: red;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
