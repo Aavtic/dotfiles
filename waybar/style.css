@@ -34,7 +34,7 @@ window#waybar {
     animation-direction: alternate;
 }
 
-#tray, #workspaces, #user,  #hardware, #wireless, #bat_clock, #custom-media, #pulseaudio, #weather, #custom-power {
+#tray, #workspaces, #user, #windows,  #hardware, #wireless, #bat_clock, #custom-media, #pulseaudio, #weather, #custom-power {
     background-color: #202c2e;
     padding: 0 10px;
     border-radius: 10px;
@@ -131,12 +131,11 @@ window#waybar {
 }
 
 #workspaces button.active {
-
     animation-name: button_animation;
     animation-duration: 1.0s;
 
-    border-radius: 20px;
-    border-color: cyan;
+    background-color: #555;
+    border-radius: 50%;
 
     background-color: cyan;
     color: black;

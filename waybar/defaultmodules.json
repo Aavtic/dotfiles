@@ -185,7 +185,28 @@
         "interval": 60,
         "on-click": "~/.config/rofi/powermenu/type-4/powermenu.sh",
         "exec": "echo ",
-    }
+    },
 
 
+    "custom/window-wrap": {
+        	"format": "Window",
+        	"tooltip-format": "window group"
+    },
+
+    "group/windows": {
+        "orientation": "horizontal",
+
+        "drawer": {
+		        "transition-duration": 500,
+		        "transition-right-to-left": true,
+	      },
+
+        "modules": [
+            "custom/window-wrap",
+            "hyprland/window",
+        ],
+    },
+    "hyprland/window": {  
+        "format": "<span color='red'> {}</span>"  
+    },
 }

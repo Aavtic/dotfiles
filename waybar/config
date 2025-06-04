@@ -10,11 +10,12 @@
         "$HOME/.config/waybar/defaultmodules.json",
     ],
 
-    "modules-left": ["tray", "group/hardware", "user"],
+    "modules-left": ["tray", "group/hardware", "user", "group/windows"],
 
     "modules-center": ["hyprland/workspaces"],
 
     "modules-right": ["custom/media", "pulseaudio", "group/bat_clock", "custom/power"],
+
 
     "tray": {
       "icon-size": 18,
