@@ -34,7 +34,7 @@ window#waybar {
     animation-direction: alternate;
 }
 
-#tray, #workspaces, #user, #windows,  #hardware, #wireless, #bat_clock, #custom-media, #pulseaudio, #weather, #custom-power {
+#tray,#network, #workspaces, #user, #windows,  #hardware, #wireless, #bat_clock, #custom-media, #pulseaudio, #weather, #custom-power {
     background-color: #202c2e;
     padding: 0 10px;
     border-radius: 10px;
@@ -134,14 +134,12 @@ window#waybar {
     animation-name: button_animation;
     animation-duration: 1.0s;
 
-    background-color: #555;
     border-radius: 50%;
 
     background-color: cyan;
     color: black;
 }
 
-/* https://google.com */
 
 
 

@@ -2,7 +2,7 @@
     "battery": {
         "spacing": 8,
         "bat": "BAT0",
-        "interval": 30,
+        "interval": 10,
         "states": {
             "warning": 30,
             "critical": 15
