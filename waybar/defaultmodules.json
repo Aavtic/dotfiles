@@ -4,6 +4,7 @@
         "bat": "BAT0",
         "interval": 10,
         "states": {
+            "good": 100,
             "warning": 30,
             "critical": 15
         },
@@ -71,7 +72,7 @@
     },
 
     "custom/hardware-wrap": {
-        	"format": "   🖴 ",
+        	"format": "  🖴 ",
         	"tooltip-format": "Hardware group"
     },
 
@@ -171,12 +172,9 @@
       "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
     },
 
-    "user": {
-            "format": "{user}",
-            "interval": 60,
-            "height": 30,
-            "width": 30,
-            "icon": true,
+    "custom/logo": {
+        "format": " ",
+        "tooltip": false,
     },
 
     "custom/power": {
