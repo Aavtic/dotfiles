@@ -10,7 +10,7 @@
         "$HOME/.config/waybar/defaultmodules.json",
     ],
 
-    "modules-left": ["tray","network#speed", "group/hardware", "group/windows"],
+    "modules-left": ["tray","network#speed", "group/hardware", "group/windows", "temperature"],
 
     "modules-center": ["hyprland/workspaces"],
 

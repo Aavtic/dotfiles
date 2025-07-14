@@ -3,6 +3,7 @@
 #
 
 # Exports
+#
 
 # installations on /usr/local
 export PATH=$PATH:/usr/local/go/bin
@@ -84,3 +85,4 @@ fi
 # === Add local bin to PATH ===
 export PATH=$HOME/.local/bin:$PATH
 
+export PATH="$HOME/.npm-global/bin:$PATH"

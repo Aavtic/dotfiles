@@ -50,19 +50,19 @@
 
     "cpu": {
         "interval": 10,
-        "format": "{}%   ",
+        "format": "{}% <span color='#76f522'>  </span>",
         "max-length": 10
     },
 
     "memory": {
         "interval": 10,
-        "format": "{used:0.1f}G/{total:0.1f}G   "
+        "format": "{used:0.1f}G/{total:0.1f}G <span color='#4b88eb'> </span>"
     },
 
     "disk": {
       "interval": 30,
       "path": "/home",
-      "format": "🖴 {specific_free:0.2f}GB ",
+      "format": "{specific_free:0.2f}GB <span color='#de2f5d'>🖴</span>",
       "format-alt": "{specific_free:0.2f} GB out of {specific_total:0.2f} GB available ",
       "unit": "GB"
     },
@@ -89,7 +89,6 @@
             "cpu",
             "memory",
             "disk",
-            "temperature",
         ],
     },
 
