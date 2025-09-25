@@ -48,7 +48,6 @@ bindkey '\e[1;3D' backward-word  # Alt + Left fallback
 # see /usr/share/doc/zsh/examples/zshrc for examples
 
 setopt autocd              # change directory just by typing its name
-#setopt correct            # auto correct mistakes
 setopt interactivecomments # allow comments in interactive mode
 setopt magicequalsubst     # enable filename expansion for arguments of the form ‘anything=expression’
 setopt nonomatch           # hide error message if there is no match for the pattern
@@ -86,3 +85,5 @@ fi
 export PATH=$HOME/.local/bin:$PATH
 
 export PATH="$HOME/.npm-global/bin:$PATH"
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/share/nvm/init-nvm.sh" ] && source /usr/share/nvm/init-nvm.sh

@@ -104,7 +104,10 @@ window#waybar {
     animation-iteration-count: infinite;
 }
 
-
+#workspaces button:hover {
+  color: #1e1e2e;
+  background-color: #cdd6f4;
+}
 
 
 /* #tray: hover, */
@@ -138,9 +141,11 @@ window#waybar {
 @keyframes button_animation {
     from {
         border-radius: 5px;
+        background-color: transparent;
     }
     to {
         border-radius: 20px;
+        background-color: aqua;
     }
 }
 
@@ -160,9 +165,6 @@ window#waybar {
     background-color: cyan;
     color: black;
 }
-
-
-
 
 #workspaces button.urgent {
     background-color: red;
