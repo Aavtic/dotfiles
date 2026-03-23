@@ -144,6 +144,7 @@
     },
 
     "network#speed": {
+      "interface": "wlp2s0",
       "interval": 1,
       "format": "{ifname}",
       "format-wifi": "{icon}  {bandwidthUpBytes}  {bandwidthDownBytes}",

@@ -1,4 +1,29 @@
 window#waybar {
+    transition:
+        margin-top 0.35s cubic-bezier(.34, 1.56, .64, 1),
+        opacity 0.20s ease-out;
+}
+
+window#waybar {
+    background: rgba(20, 20, 20, 0.95);
+}
+
+/* Hidden state */
+window#waybar.hidden {
+    margin-top: -40px;   /* move it off-screen */
+    opacity: 0;
+}
+
+/* Visible state */
+window#waybar:not(.hidden) {
+    margin-top: 0;
+    opacity: 1;
+}
+
+
+
+
+window#waybar {
     background-color: inherit;
     font-family: Iosevka;
     color: #e4ffbf;
