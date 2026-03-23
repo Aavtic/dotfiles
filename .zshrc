@@ -4,8 +4,8 @@
 #
 #
 # AWS
-export AWS_ACCESS_KEY_ID=key
-export AWS_SECRET_ACCESS_KEY=key
+export AWS_ACCESS_KEY_ID=KEY
+export AWS_SECRET_ACCESS_KEY=KEY
 export AWS_REGION=us-east-2
 
 # Exports
